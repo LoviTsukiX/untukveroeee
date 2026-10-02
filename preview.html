@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Owl's Secret 💙</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Arial,sans-serif;color:#eaf5ff;background:#020817}
+#sky{position:fixed;inset:0;background:radial-gradient(circle at 50% 10%,#12376b 0,#06162f 35%,#020817 80%)}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:white;box-shadow:0 0 9px #8fd0ff;animation:twinkle 2s infinite}
+@keyframes twinkle{50%{opacity:.25;transform:scale(.5)}}
+.moon{position:absolute;right:9%;top:7%;width:100px;height:100px;border-radius:50%;background:#e4f2ff;box-shadow:0 0 40px #8bc8ff}
+.card{width:min(720px,92vw);max-height:88vh;overflow:auto;padding:35px 25px;text-align:center;border-radius:28px;background:rgba(3,18,42,.82);border:1px solid #24517d;box-shadow:0 20px 80px #0008}
+.screen{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transform:translateX(45px);transition:.55s}
+.screen.active{opacity:1;visibility:visible;transform:translateX(0)}
+.owl{font-size:70px}.badge{display:inline-block;margin:12px 0;padding:7px 13px;border-radius:20px;background:#102e50;color:#91ccff;font-size:12px}
+h1,h2{margin:8px 0 15px}h1{font-size:clamp(42px,8vw,65px)}h2{font-size:clamp(30px,6vw,45px)}
+p{line-height:1.8;color:#c4dcf2}.blue{color:#8dceff;font-weight:bold}
+input{width:min(330px,85%);padding:14px;border-radius:14px;border:1px solid #32638e;background:#020b19;color:white;text-align:center}
+button{margin-top:18px;padding:13px 23px;border:0;border-radius:14px;background:#9ed6ff;color:#06152a;font-weight:bold;cursor:pointer}
+button:hover{transform:translateY(-2px)}
+.error{height:20px;margin-top:8px;color:#ff9baa;font-size:13px}
+.media{width:min(580px,100%);margin:20px auto;border-radius:20px;overflow:hidden;background:#000;border:1px solid #234c72}
+.media img,.media video{display:block;width:100%;max-height:400px;object-fit:cover}
+.placeholder{padding:70px 20px;color:#7899b8;line-height:1.7}
+.dots{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:5}
+.dot{width:7px;height:7px;border-radius:50%;background:#355879}.dot.on{width:23px;border-radius:8px;background:#9ed6ff}
+.secret{padding:18px;border:1px dashed #37698e;border-radius:15px;color:#acd5f3}
+</style>
+</head>
+<body>
+<div id="sky"><div class="moon"></div></div>
+
+<section class="screen active">
+<div class="card">
+<div class="owl">🦉</div>
+<div class="badge">OWL'S SECRET • BOYFRIEND DAY</div>
+<h1>Hei, kamu.</h1>
+<p>Ada rahasia kecil buat kamu.<br>Masukkan password-nya dulu ya 💙</p>
+<input id="pass" type="password" placeholder="password...">
+<br><button id="unlock">Masuk ke rahasia 💙</button>
+<div class="error" id="err"></div>
+</div>
+</section>
+
+<section class="screen"><div class="card">
+<div class="owl">🌙🦉</div><div class="badge">01 • BOYFRIEND DAY</div>
+<h2>Happy Boyfriend Day!! 💙</h2>
+<p>Happy Boyfriend Day Sayangku:3 Aku ada Hadian kecil buat kamuu:>.</p>
+<p class="blue">Dari Oliv/Loviii | Pencet lanjut dong🥺👉.</p>
+<button class="next">Lanjut →</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div class="owl">💙</div><div class="badge">02 • FOR YOU:3</div>
+<h2>Ini kecil, tapi dari hati nyaaaa:3.</h2>
+<p>Aku bikin halaman ini khusus buat kamu. Nggak harus sempurna, yang penting dibuat dengan niat dan penuh kenangan dan akuu sayangggg sama kamuu:3.</p>
+<p class="blue">Semoga kamu suka kejutan kecil ini:3. 🌙</p>
+<button class="next">Lanjut →</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div class="owl">📸🦉</div><div class="badge">03 • MEMORY</div>
+<h2>Kenangan kita</h2>
+<div class="media">
+<img src="foto.jpg" alt="Foto kenangan" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+<div class="placeholder" style="display:none">Masukkan foto dengan nama<br><b>foto.jpg</b><br>ke folder yang sama dengan HTML ini.</div>
+</div>
+<p>Foto sederhana, tapi kenangannya nggak sederhana. 💙</p>
+<button class="next">Lanjut →</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div class="owl">🎬🦉</div><div class="badge">04 • CLIP VIDEO</div>
+<h2>Satu clip buat kamu 🎞️</h2>
+<div class="media"><video id="clip" controls playsinline muted><source src="1002.mp4" type="video/mp4">Video tidak tersedia.</video></div>
+<p>ini pas kita lagi main roblox waktu itu hehehe:> <span class="blue">:3</span> aku clip diem diem ee.</p>
+<button class="next">Lanjut →</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div class="owl">💌</div><div class="badge">05 • ONE MORE THING</div>
+<h2>Biar makin sayang.</h2>
+<p>karena kamu enggak mau kayak aku bikin jj, aku bikinin kamu web aja, sebagai hadian ku ke kamu, maaf ya kalo banyak error. karena aku banyak kegiatan enggak sempat buat lanjutin cordingan ini, dan selamatnya kamu juara 2 ONS ya ini hadianku soo happy boyfriend day:3 sayang.</p>
+<p class="blue">Aku cayanggg>V<  💙</p>
+<button class="next">Lanjut →</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div class="owl">✨</div><div class="badge">06 • SECRET NOTE</div>
+<h2>Untuk kamu.</h2>
+<div class="secret">Kalau kamu sudah sampai sini, berarti kamu menemukan pesan rahasia. Tetap jadi diri kamu sendiri, ya dan aku terimakasih karena aku senang kalo kamu ada di hidupku. soo jadilah cowok sejati buat aku dan anak-anak kamu dimasa nanti hehehe 💙(asik ga si hehe:>)</div>
+<button class="next">Lanjut →</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div class="owl">💙🌙</div><div class="badge">07 • THE END</div>
+<h2>Happy Boyfriend Day💙🌙.</h2>
+<p>Terima kasih sayanggg buat kata-kataku hari ini .</p>
+<p class="blue">Semoga kamu sayang sama aku dan satu sama lainn muachhhh. 🦉💙</p>
+<p>— ini dari oliv/lovi happy boyfriend day💙 love you. my darling✨</p>
+<button id="replay">↻ Ulang</button>
+</div></section>
+
+<div class="dots" id="dots"></div>
+<audio id="music" src="perfect.mp3" loop preload="auto"></audio>
+
+<script>
+const pages=[...document.querySelectorAll('.screen')];
+const dots=document.getElementById('dots');
+const music=document.getElementById('music');
+let current=0;
+
+pages.forEach((_,i)=>{
+ const d=document.createElement('span');
+ d.className='dot'+(i===0?' on':'');
+ dots.appendChild(d);
+});
+
+function show(n){
+ pages[current].classList.remove('active');
+ current=n;
+ setTimeout(()=>pages[current].classList.add('active'),70);
+ [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===current));
+}
+
+document.getElementById('unlock').onclick=()=>{
+ const value=document.getElementById('pass').value.trim().toLowerCase();
+ if(value!=='17112010'){
+   document.getElementById('err').textContent='Password-nya belum tepat 👀';
+   return;
+ }
+ document.getElementById('err').textContent='';
+ music.volume=.7;
+ music.play().catch(()=>{});
+ show(1);
+};
+
+document.getElementById('pass').addEventListener('keydown',e=>{
+ if(e.key==='Enter')document.getElementById('unlock').click();
+});
+
+document.querySelectorAll('.next').forEach(btn=>{
+ btn.onclick=()=>{if(current<pages.length-1)show(current+1)};
+});
+
+document.getElementById('replay').onclick=()=>{
+ music.currentTime=0;
+ document.getElementById('pass').value='';
+ show(0);
+};
+
+for(let i=0;i<100;i++){
+ const s=document.createElement('i');
+ s.className='star';
+ s.style.left=Math.random()*100+'%';
+ s.style.top=Math.random()*100+'%';
+ s.style.animationDelay=Math.random()*3+'s';
+ document.getElementById('sky').appendChild(s);
+}
+</script>
+</body>
+</html>
